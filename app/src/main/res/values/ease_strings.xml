@@ -1,0 +1,222 @@
+<resources>
+    <string name="location_recv">[%1$s\'s location]</string>
+    <string name="location_prefix">[My location]</string>
+    <string name="picture">[Image]</string>
+    <string name="video">[Video]</string>
+    <string name="file">[File]</string>
+    <string name="custom">[Custom message]</string>
+    <string name="voice_prefix">[Voice]</string>
+    <string name="voice_call">[Voice call]</string>
+    <string name="video_call">[Video call]</string>
+    <string name="dynamic_expression">[Animoji]</string>
+
+    <string name="were_mentioned">[@Mentioning me]</string>
+    <string name="were_not_send_msg">[Draft]</string>
+
+    <string name="text_ack_msg">Read</string>
+    <string name="text_delivered_msg">Delivered</string>
+    <string name="not_download">Not downloaded:</string>
+    <string name="have_downloaded">Downloaded</string>
+    <string name="did_not_download">Not downloaded</string>
+    <string name="have_uploaded">Uploaded</string>
+    <string name="downwaiting">Downloading file, please wait.</string>
+    <string name="Failed_to_download_file">Failed to download file: </string>
+    <string name="File_expired">File expired:</string>
+    <string name="Download_the_pictures">Download image: 0%</string>
+    <string name="Image_expired">Image expired!</string>
+    <string name="Video_expired">Video expired!</string>
+    <string name="Download_the_pictures_new">Download image:</string>
+    <string name="location_message">Location info</string>
+    <string name="button_send">Send</string>
+    <string name="Network_error">Network error</string>
+    <string name="please_check">Key verification error! Please check key settings in the AndroidManifest.xml file.</string>
+    <string name="Making_sure_your_location">Finding your location...</string>
+    <string name="is_down_please_wait">Downloading video, please wait. </string>
+    <string name="Is_download_voice_click_later">Downloading audio, click when done. </string>
+    <string name="alert_kicked_for_offline">You\'ve been kicked out of the chat room due to network disconnection. Click here to rejoin the room. </string>
+    <string name="button_pushtotalk">Press and hold to speak</string>
+    <string name="button_pushtotalk_pressed">Release to send message</string>
+    <string name="Recording_without_permission">No recording permission</string>
+    <string name="The_recording_time_is_too_short">Speech too short</string>
+    <string name="send_failure_please">Failed to send message, please check the server connection. </string>
+    <string name="Send_voice_need_sdcard_support">You need an SD card to send voice messages</string>
+    <string name="move_up_to_cancel">Swipe up \u0020\u0020 to cancel message sending</string>
+    <string name="release_to_cancel">Release \u0020\u0020 to cancel message sending</string>
+    <string name="send_fail">Failed to send message, </string>
+    <string name="recoding_fail">Recording failed, please try again!</string>
+    <string name="attach_smile">Emojis</string>
+    <string name="attach_picture">Album</string>
+    <string name="attach_take_pic">Camera</string>
+    <string name="attach_location">Location</string>
+    <string name="attach_video">Videos</string>
+    <string name="attach_movie">Movie</string>
+    <string name="attach_file">Files</string>
+    <string name="attach_media_call">Audio and Video </string>
+    <string name="attach_voice_call">Voice Call</string>
+    <string name="attach_video_call">Video call</string>
+    <string name="sd_card_does_not_exist">No SD card found, you can\'t take photos</string>
+    <string name="cant_find_pictures">Can\'t find image</string>
+    <string name="File_does_not_exist">File does not exist</string>
+    <string name="unable_to_get_loaction">Can\'t obtain your location info!</string>
+    <string name="alert_during_typing">Entering &#8230;</string>
+    <string name= "no_more_messages">No more messages</string>
+    <string name="all_members">All members</string>
+    <string name="not_connect_to_server">Not connected to server, please try again later. </string>
+
+    <string name="msg_recall_by_self">You recalled a message</string>
+    <string name="msg_recall_by_user">%1$s recalled a message</string>
+    <string name="msg_recall_by_another">%1$s recalled a message from %2$s</string>
+
+    <string name="Video_footage">Shoot video</string>
+    <string name="recording_video">Record video</string>
+    <string name="The_video_to_start">Recording started</string>
+    <string name="Whether_to_send">Send now?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="prompt">Prompt</string>
+    <string name="Open_the_equipment_failure">Failed to open device!</string>
+
+    <string name="The_other_party_has_refused_to">The other party rejected the call</string>
+    <string name="The_other_is_not_online">The other party is offline</string>
+    <string name="The_other_is_on_the_phone">The other party is in a call</string>
+    <string name="The_other_party_did_not_answer">Not answered</string>
+    <string name="did_not_answer">Hung up</string>
+    <string name="Has_been_cancelled">Canceled</string>
+    <string name="illegal_user_name">Invalid username</string>
+    <string name="can_not_connect_chat_server_connection">Can\'t connect to chat server</string>
+    <string name="call_duration">Call duration</string>
+    <string name="Refused">Rejected</string>
+    <string name="call_version_inconsistent">Inconsistent call protocol. Please update to the latest version. </string>
+    <string name="switch_camera">Change camera</string>
+    <string name="mute">Mute</string>
+    <string name="Hands_free">Hands-free</string>
+    <string name="hang_up">Hang up</string>
+    <string name="has_been_hang_up">Hung up</string>
+    <string name="answer">Answer</string>
+    <string name="Are_connected_to_each_other">Connecting, please wait. </string>
+    <string name="Is_not_yet_connected_to_the_server">Not connected to server</string>
+    <string name="In_the_call">Busy...</string>
+    <string name="The_other_party_refused_to_accept">Rejected</string>
+    <string name="Connection_failure">Failed to connect, please try again. </string>
+    <string name="The_other_party_is_not_online">The other party is offline, please try again later. </string>
+    <string name="The_other_is_on_the_phone_please">Busy, please try again. </string>
+    <string name="The_other_is_hang_up">Hung up</string>
+    <string name="The_other_party_did_not_answer_new">Not answered</string>
+    <string name="direct_call">Direct</string>
+    <string name="relay_call">Relay</string>
+    <string name="network_unavailable">Network unavailable, please check your network connection. </string>
+    <string name="network_unstable">Unstable network</string>
+    <string name="no_call_data">No call data</string>
+    <string name="hanging_up">Hanging up</string>
+    <string name="have_connected_with">Connection established with other party</string>
+    <string name="voice_and_video_conference">Voice and video conference</string>
+    <string name="title_live">Interactive video</string>
+    <string name="resend">Resend</string>
+    <string name="confirm_resend">Are you sure you want to resend this message?</string>
+    <string name="answering">Connecting</string>
+
+    <!-- For group ack start -->
+    <string name="title_group_notification">Group notification</string>
+    <string name="title_ack_read_list">Read list</string>
+    <string name="group_ack_read_count">%1$d read</string>
+
+    <string name="search_new">Search</string>
+    <string name="has_been_send">Sent</string>
+
+    <string name="ease_search_text_hint">Search</string>
+
+    <string name="ease_list_no_data_text">No data</string>
+    <string name="ease_list_no_conversation_data_text">No chat data</string>
+
+    <string name="ease_map_title">Location info</string>
+
+    <string name="custom_message">Custom message: %1$s</string>
+
+    <string name="ease_conversation_menu_make_read">Set as read</string>
+    <string name="ease_conversation_menu_make_top">Pin to top</string>
+    <string name="ease_conversation_menu_cancel_top">Unpin</string>
+    <string name="ease_conversation_menu_delete">Delete conversation</string>
+    <string name="ease_delete_conversation_error">Failed to delete conversion or this conversation does not exist</string>
+    <string name="ease_friends_delete_the_contact">Delete contact</string>
+    <string name="ease_friends_delete_contact_hint">Delete this contact?</string>
+    <string name="ease_check_file_exist">Check whether the attachment exists!</string>
+
+    <string name="ease_conversation_delete_item_fail">Failed to delete conversation!</string>
+    <string name="ease_conversation_system_message">System message</string>
+
+    <string name="ease_contact_delete_item_fail">Failed to delete conversation!</string>
+    <string name="ease_contact_menu_add_note">Set remarks</string>
+    <string name="ease_contact_add_note_developing">Feature under development, it will be available soon</string>
+
+    <string name="action_copy">Copy</string>
+    <string name="action_forward">Forward</string>
+    <string name="action_recall">Recall</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_multi_select">Choose multiple</string>
+    <string name="delete_voice">Delete voice</string>
+    <string name="delete_video">Delete video </string>
+
+    <string name="contact_send_message">You have %2$s message(s) from %1$s contact(s)</string>
+    <string name="unsupported_message_body">Unsupported message body</string>
+    <string name="can_not_find_app_open_file">Can\'t find proper app to open this file</string>
+    <string name="no_ack">No receipt info</string>
+    <string name="action_translate">Translate</string>
+    <string name="action_reTranslate">Retranslate</string>
+    <string name="action_hide">Hide</string>
+    <string name="action_label">Label</string>
+
+
+    <string name="change_voice">Audio</string>
+
+    <string name="password">Password</string>
+
+    <string name="The_other_is_recived">Call answered on another device</string>
+    <string name="The_other_is_refused">Call ended on another device</string>
+    <string name="The_other_is_busy">The other party is busy</string>
+    <string name="The_coming_call">New incoming call</string>
+    <string name="alert_window_permission_denied">The current app does not have floating window permission. </string>
+    <string name="The_Conference_call_currently_in_progress">Voice/Video call in progress, please try again later...</string>
+    <string name="title_activity_ease_multiple_video">EaseMultipleVideoActivity</string><!-- Strings used for fragments for navigation --><string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="wait_calling">Wait for the other party to answer</string>
+    <string name="wait_recive">Wait for the other party to answer</string>
+
+    <string name="alert_request_video">%1$s initiated a video call invitation</string>
+    <string name="alert_request_voice">%1$s initiated a voice call invitation</string>
+    <string name="alert_request_multiple_video">%1$s initiated a multi-user video call invitation</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- The representation of a time duration when negative. An example is -1:14. This can be used with a countdown timer for example.-->
+
+
+    <string name="invited_to_join_video_call">invited you to a video call</string>
+    <string name="camera">Camera</string>
+    <string name="waiting_for_accept">Waiting for the other party to accept the invitation</string>
+    <string name="make_sure_leave">Are you sure you want to leave the current conversation?</string>
+    <string name="invited_to_make_multi_party_call">invited you to a voice/video conference call</string>
+    <string name="invite_you_for_audio_and_video_call">invited you to a voice/video call</string>
+    <string name="in_the_call">Call in progress</string>
+    <string name="invite_you_for_video_call">invited you to a video call</string>
+    <string name="invite_you_for_audio_call">invited you to a voice call</string>
+    <string name="determine">OK</string>
+
+    <string name="easemob">Easemob</string>
+
+
+    <string name="em_about_hx_company_introduction">公司介绍</string>
+    <string name="em_about_hx_company_privacy_regulations">隐私条例</string>
+    <string name="em_about_hx_company_disclaimers">免责声明</string>
+    <string name="disclaimer_content">&#160;&#160;&#160;&#160;Mua~（“本产品”）是由环信提供的一款测试产品，环信享有本产品的著作权和所有权。特此免费授予获得本产品和相关文档文件（以下简称“软件”）副本的任何人无限制地试用软件的权利，包括但不限于试用，复制，修改，合并，发布，分发，但本产品不得用于任何商业用途，不得再许可和/或出售该软件的副本。\n\n
+
+&#160;&#160;&#160;&#160;本产品按“现状”提供，没有任何形式的明示担保，包括但不限于对适配性、特定目的的适用性和非侵权性的担保。无论是由于与本产品或本产品的试用或其他方式有关的任何合同、侵权或其他形式的行为，环信均不对任何索赔、损害或其他责任负责。\n\n
+
+&#160;&#160;&#160;&#160;您可以自由选择是否试用本产品提供的服务，如果您下载、安装、试用本产品中所提供的服务，即表明您信任该产品所有人，环信对任何原因在试用本产品中提供的服务时可能对您自身或他人造成的任何形式的损失和伤害不承担任何责任。</string>
+
+    <string name="em_about_hx_company_reg_account">注册环信账号</string>
+    <string name="em_about_hx_company_release_time">发版时间</string>
+    <string name="em_about_hx_company_sdk_version">SDK版本</string>
+
+</resources>

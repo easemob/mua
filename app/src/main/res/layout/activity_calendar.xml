@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/memorial_bg">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="30dp"
+            android:layout_marginTop="60dp"/>
+
+        <ImageView
+            android:onClick="onCreateAnniversary"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/add_icon"/>
+
+    </FrameLayout>
+
+</LinearLayout>

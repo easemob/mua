@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_01"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="264dp"
+                    android:layout_height="185dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="46dp"
+                    android:layout_marginBottom="158dp"
+                    android:src="@drawable/cabinet" />
+
+                <ImageView
+                    android:id="@+id/iv_tv"
+                    android:layout_width="126dp"
+                    android:layout_height="149dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="83dp"
+                    android:layout_marginBottom="270dp"
+                    android:onClick="onTvClick"
+                    android:src="@drawable/tv" />
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="62dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="214dp"
+                    android:layout_marginBottom="295dp"
+                    android:src="@drawable/piggy_bank" />
+
+                <ImageView
+                    android:id="@+id/iv_coin"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginBottom="376dp"
+                    android:onClick="onCollectCoins"
+                    android:src="@drawable/coin"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="230dp"
+                    android:layout_marginBottom="376dp"
+                    android:textColor="#6A4D00"
+                    android:textSize="14sp"
+                    tools:text="3:00" />
+
+                <ImageView
+                    android:layout_width="132dp"
+                    android:layout_height="102dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="71dp"
+                    android:layout_marginBottom="94dp"
+                    android:src="@drawable/nest" />
+
+                <ImageView
+                    android:id="@+id/iv_pet"
+                    android:layout_width="78dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="41dp"
+                    android:layout_marginBottom="100dp"
+                    android:onClick="onPetClick"
+                    android:src="@drawable/kitty_normal" />
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/iv_cowl"-->
+                <!--                    android:layout_width="59dp"-->
+                <!--                    android:layout_height="44dp"-->
+                <!--                    android:layout_gravity="end|bottom"-->
+                <!--                    android:layout_marginEnd="46dp"-->
+                <!--                    android:layout_marginBottom="92dp"-->
+                <!--                    android:onClick="onPetClick"-->
+                <!--                    android:src="@drawable/kitty_bowl" />-->
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_02"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="196dp"
+                    android:layout_marginTop="79dp"
+                    android:background="@drawable/calendar"
+                    android:onClick="onCalendarClick"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="7dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/calendar"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_calendar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center"
+                        android:text="在一起的第"
+                        android:textColor="#1F458E"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_calendar_title"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:text="28275 天"
+                        android:textColor="#1F458E"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="114dp"
+                    android:layout_height="97dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="136dp"
+                    android:background="@drawable/frame"
+                    android:onClick="onGalleryChange"
+                    android:paddingStart="10dp"
+                    android:paddingTop="9dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="174dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginBottom="210dp"
+                    android:src="@drawable/group_42" />
+
+                <ImageView
+                    android:layout_width="314dp"
+                    android:layout_height="283dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginBottom="79dp"
+                    android:src="@drawable/guys" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_03">
+
+                <ImageView
+                    android:layout_width="302dp"
+                    android:layout_height="146dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginBottom="184dp"
+                    android:src="@drawable/table" />
+
+                <ImageView
+                    android:layout_width="89dp"
+                    android:layout_height="77dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginBottom="282dp"
+                    android:onClick="onEnterAv"
+                    android:src="@drawable/phone" />
+
+                <ImageView
+                    android:id="@+id/iv_music"
+                    android:layout_width="106dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginBottom="267.5dp"
+                    android:onClick="onEnterBgm"
+                    android:src="@drawable/al_music" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="140dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="353dp"
+                    android:src="@drawable/music_notes" />
+
+                <ImageView
+                    android:layout_width="103dp"
+                    android:layout_height="151dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginBottom="80dp"
+                    android:onClick="onEnterGlobal"
+                    android:src="@drawable/global" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_04">
+
+                <ImageView
+                    android:layout_width="78dp"
+                    android:layout_height="153dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginBottom="200dp"
+                    android:src="@drawable/plant" />
+
+                <ImageView
+                    android:layout_width="222dp"
+                    android:layout_height="238dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginBottom="126dp"
+                    android:onClick="onFridgeClick"
+                    android:src="@drawable/fridge" />
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="102dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="138dp"
+                    android:layout_marginBottom="318dp"
+                    android:src="@drawable/book" />
+            </FrameLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="12dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onChatClick">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/whisper" />
+
+            <ImageView
+                android:id="@+id/iv_unread_chat"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="9dp"
+                android:src="@drawable/sp_unread"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onDiaryClick">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/diary" />
+
+            <ImageView
+                android:id="@+id/iv_unread_diary"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="9dp"
+                android:src="@drawable/sp_unread"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:onClick="onTreasureClick">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:src="@drawable/treasure_chest" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onMarketClick">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/mall" />
+
+            <ImageView
+                android:id="@+id/iv_unread_mall"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="9dp"
+                android:src="@drawable/sp_unread"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onPersonClick">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/info" />
+
+            <ImageView
+                android:id="@+id/iv_unread_info"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="9dp"
+                android:src="@drawable/sp_unread"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:onClick="onScreenShotNew"
+        android:src="@drawable/takephoto" />
+
+    <FrameLayout
+        android:id="@+id/fl_me"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="95dp">
+
+        <com.community.mua.views.CircleImageView
+            android:id="@+id/iv_me"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_ta"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="130dp">
+
+        <com.community.mua.views.CircleImageView
+            android:id="@+id/iv_ta"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/iv_ta_state"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/sp_online_state" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_pet_status"
+            android:layout_width="71dp"
+            android:layout_height="22dp"
+            android:src="@drawable/pet_status_normal" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp">
+
+            <com.community.mua.views.StrokeTextView
+                android:id="@+id/tv_coins"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/sp_coin_top"
+                android:gravity="center_vertical|end"
+                android:paddingVertical="0.5dp"
+                android:paddingEnd="13dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:borderColor="#415DD7"
+                app:borderWidth="1dp"
+                app:hasBorder="true"
+                tools:text="1000" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/coin_topright" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_flash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+</FrameLayout>

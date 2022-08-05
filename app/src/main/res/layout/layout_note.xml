@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="260dp"
+    android:layout_height="206dp"
+    android:background="@drawable/notice_paper_in_fridge"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10dp">
+
+        <FrameLayout
+            android:id="@+id/fl_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/sp_ff007a">
+
+            <com.community.mua.views.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="#343434"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13/06月 周一"
+                android:textColor="#294DCA"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_trash"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/trash"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        android:text="adadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsadsadadsadsadsadadsasdadsads"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/et_note"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:gravity="start"
+        android:hint="请输入内容（最多输入80字）"
+        android:maxLength="80"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        android:textColor="#000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+</LinearLayout>

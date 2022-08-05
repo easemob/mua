@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.community.mua.views.CustomLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_watch_movie"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="220dp"
+        android:background="@color/black">
+        <ImageView
+            android:id="@+id/iv_go_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/adaptive_12dp"
+            android:layout_marginTop="@dimen/em_margin_20"
+            android:src="@drawable/power" />
+
+        <ImageView
+            android:id="@+id/iv_dev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/developing"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="看电影开发中..."
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_below="@id/iv_dev"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/adaptive_43dp"
+            android:layout_marginBottom="@dimen/adaptive_96dp"
+            android:background="@drawable/walkie_talkie_bg"
+            android:layout_centerInParent="true"/>
+
+    </FrameLayout>
+</com.community.mua.views.CustomLinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2efc1"
+    android:orientation="vertical">
+
+    <com.community.mua.views.ResizableImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/little_house_bg"/>
+
+    <ImageView
+        android:id="@+id/iv_male"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:src="@mipmap/male_avatar"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/sp_294dca_white"
+        android:padding="10dp"
+        android:textColor="#7D4B2A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/iv_male"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="55dp"
+        android:src="@mipmap/group_368"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/iv_male"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_female"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@mipmap/female_avatar"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_receive" />
+
+    <ImageView
+        android:id="@+id/iv_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="9dp"
+        android:src="@mipmap/group_369"
+        android:visibility="gone"
+        app:layout_constraintRight_toLeftOf="@id/iv_female"
+        app:layout_constraintTop_toBottomOf="@id/iv_receive" />
+
+    <Button
+        android:id="@+id/btn_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/sl_next_huge"
+        android:onClick="onEnter"
+        android:text="进入我们的MUA小屋"
+        android:textColor="#6A4C00"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="86dp"
+        android:layout_height="158dp"
+        android:background="@drawable/sp_chat_bg">
+
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_width="84dp"
+            android:layout_height="156dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            tools:src="@drawable/frog" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="天空的星星"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_change"
+        android:layout_width="88dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/btn_hign_light" />
+</LinearLayout>

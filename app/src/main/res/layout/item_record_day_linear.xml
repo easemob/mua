@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardForegroundColor="@android:color/transparent"
+    android:layout_margin="6dp"
+    app:strokeColor="#B1A2FF"
+    app:strokeWidth="4dp"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardCornerRadius="6dp">
+
+
+    <RelativeLayout
+        android:id="@+id/ll_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <FrameLayout
+            android:id="@+id/fl_avatar_mine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/sp_ff007a">
+
+            <com.community.mua.views.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:textColor="#B1A2FF"
+            android:textSize="12sp"
+            tools:text="上线时间 13:30" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fl_avatar_mine"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical">
+
+
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location_record" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="#343434"
+                android:textSize="15sp"
+                tools:text="数码大厦A座" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

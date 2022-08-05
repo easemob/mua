@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/month_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/em_margin_20"
+            android:layout_marginEnd="@dimen/em_margin_20"
+            android:layout_marginTop="@dimen/em_margin_20"
+            android:text="2022"
+            android:textColor="#343434"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_year"
+            app:layout_constraintStart_toStartOf="@id/tv_year"
+            app:layout_constraintEnd_toEndOf="@id/tv_year"
+            android:layout_marginTop="@dimen/adaptive_3dp"
+            android:background="#B1A2FF"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gv_month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_year"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="@dimen/em_margin_20"
+            android:layout_marginTop="@dimen/em_common_item_height"
+            android:layout_marginBottom="@dimen/em_margin_20"
+            android:numColumns="4"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

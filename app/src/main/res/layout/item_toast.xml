@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_toast">
+
+    <TextView
+        android:id="@android:id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="47dp"
+        android:paddingEnd="47dp"
+        android:paddingTop="23dp"
+        android:paddingBottom="23dp"
+        android:textColor="#6A4D00"
+        android:text="adsadadadsadsas"
+        android:textSize="16sp" />
+</FrameLayout>

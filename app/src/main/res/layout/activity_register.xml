@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/login_bg_img">
+
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/box_profile"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:orientation="horizontal"
+            android:paddingStart="28dp"
+            android:paddingEnd="36dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="#343434"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                tools:text="月兑君"
+                android:maxLength="10"
+                android:textColor="#343434"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:onClick="onNicknameEdit"
+                android:src="@mipmap/edit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:paddingStart="28dp"
+            android:paddingEnd="36dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生日"
+                android:textColor="#343434"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_birth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                tools:text="2004-03-01"
+                android:textColor="#343434"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:onClick="onBirthDayEdit"
+                android:src="@mipmap/chevion_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="28dp"
+            android:paddingEnd="36dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别"
+                android:textColor="#343434"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cb_male"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="23dp"
+                android:background="@drawable/sl_male"
+                android:button="@null"
+                android:checked="true"
+                android:enabled="false" />
+
+            <CheckBox
+                android:id="@+id/cb_female"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sl_female"
+                android:button="@null" />
+        </LinearLayout>
+
+        <Button
+            android:onClick="onNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/sl_next"
+            android:text="下一步"
+            android:textColor="#6A4C00"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_above="@id/ll_detail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-33dp"
+        android:background="@drawable/sp_294dca"
+        android:onClick="onAvatarChange">
+
+        <com.community.mua.views.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/camera" />
+    </FrameLayout>
+
+
+</RelativeLayout>

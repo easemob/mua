@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设置圆角-->
+    <!--  按顺序分别对应：左下角的角度、右下角的角度、左上角的角度、右上角的角度-->
+    <corners
+        android:bottomLeftRadius="12dp"
+        android:bottomRightRadius="12dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp" />
+    <!--设置圆角背景色-->
+    <solid android:color="@color/white" />
+    <!--  设置边框大小与背景色-->
+    <stroke
+        android:width="1px"
+        android:color="@color/white" />
+
+</shape>

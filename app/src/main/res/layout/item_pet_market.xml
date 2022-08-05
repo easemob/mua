@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/sp_e5baff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <FrameLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/sp_f2ddff">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:src="@drawable/group_722" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/pet_foods" />
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:textColor="#3F58D1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="富含优质蛋白质，\n添加维生素和牛磺酸" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.community.mua.views.StrokeTextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/sp_coin_top"
+                    android:paddingStart="40dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="9dp"
+                    android:paddingBottom="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:borderColor="#415DD7"
+                    app:borderWidth="1dp"
+                    app:hasBorder="true"
+                    tools:text="20" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/coin_topright" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_reduce"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/reduce" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="17dp"
+                android:paddingEnd="17dp"
+                android:text="0"
+                android:textColor="#361DD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_plus"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/plus" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

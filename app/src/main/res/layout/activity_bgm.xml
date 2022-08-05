@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud_01" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/cloud_02" />
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <FrameLayout
+        android:id="@+id/fl_music"
+        android:layout_width="214dp"
+        android:layout_height="214dp"
+        android:layout_above="@id/fl_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:id="@+id/iv_music"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/music_roll" />
+
+        <com.community.mua.views.CircleImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="103dp"
+            android:layout_height="103dp"
+            android:layout_gravity="center"
+            android:src="@drawable/nomusic"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_sensor_on"
+        android:layout_width="70dp"
+        android:layout_height="208dp"
+        android:layout_alignTop="@+id/iv_adjuster"
+        android:layout_alignEnd="@+id/fl_music"
+        android:layout_toEndOf="@id/iv_adjuster"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/sensor_on"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_adjuster"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/fl_music"
+        android:layout_alignStart="@id/fl_music"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/adjuster" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_bottom"
+        android:layout_marginBottom="-30dp"
+        android:src="@drawable/cloud_03" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fl_bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/cloud_04" />
+
+    <FrameLayout
+        android:id="@+id/fl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/misic_drawer">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="40dp"
+            android:overScrollMode="never" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

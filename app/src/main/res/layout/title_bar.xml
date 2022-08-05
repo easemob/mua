@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FCF4F4"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/arrow_left" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_weight="1"
+        android:textColor="#294DCA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="啊哒哒哒" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ellipsis"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@mipmap/setting"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:textColor="#294DCA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="全部" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ease_chat_send_btn_selector"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/em_toolbar_title_size"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="发送" />
+
+    <FrameLayout
+        android:id="@+id/fl_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:visibility="gone">
+
+        <com.community.mua.views.StrokeTextView
+            android:id="@+id/tv_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/sp_coin_top"
+            android:paddingStart="30dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="1dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:borderColor="#415DD7"
+            app:borderWidth="1dp"
+            app:hasBorder="true"
+            tools:text="1000" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/coin_topright" />
+    </FrameLayout>
+</LinearLayout>

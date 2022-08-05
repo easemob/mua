@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.AboutHxActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <com.community.mua.views.ArrowItemView
+        android:id="@+id/item_privacy_regulations"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        app:arrowItemAvatarHeight="@dimen/em_about_me_avatar_size"
+        app:arrowItemAvatarWidth="@dimen/em_about_me_avatar_size"
+        app:arrowItemTitle="@string/em_about_hx_company_privacy_regulations"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <com.community.mua.views.ArrowItemView
+        android:id="@+id/item_disclaimers"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+
+        app:arrowItemAvatarHeight="@dimen/em_about_me_avatar_size"
+        app:arrowItemAvatarWidth="@dimen/em_about_me_avatar_size"
+
+        app:arrowItemTitle="@string/em_about_hx_company_disclaimers"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.community.mua.views.ArrowItemView
+        android:id="@+id/item_registered_easemob_account"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+
+        app:arrowItemAvatarHeight="@dimen/em_about_me_avatar_size"
+        app:arrowItemAvatarWidth="@dimen/em_about_me_avatar_size"
+
+        app:arrowItemTitle="@string/em_about_hx_company_reg_account"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <com.community.mua.views.ArrowItemView
+        android:id="@+id/item_release_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+
+        app:arrowItemAvatarHeight="@dimen/em_about_me_avatar_size"
+
+        app:arrowItemAvatarWidth="@dimen/em_about_me_avatar_size"
+        app:arrowItemContent="2022-07-10"
+        app:arrowItemShowArrow="false"
+        app:arrowItemTitle="@string/em_about_hx_company_release_time"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <com.community.mua.views.ArrowItemView
+        android:id="@+id/item_sdk_version"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        app:arrowItemAvatarHeight="@dimen/em_about_me_avatar_size"
+        app:arrowItemAvatarWidth="@dimen/em_about_me_avatar_size"
+        app:arrowItemContent="v3.9.3"
+        app:arrowItemShowArrow="false"
+        app:arrowItemTitle="@string/em_about_hx_company_sdk_version"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.community.mua.views.ArrowItemView
+        android:id="@+id/item_app_version"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        app:arrowItemAvatarHeight="@dimen/em_about_me_avatar_size"
+        app:arrowItemAvatarWidth="@dimen/em_about_me_avatar_size"
+        app:arrowItemContent="v1.0.0"
+        app:arrowItemShowArrow="false"
+        app:arrowItemTitle="Mua~版本"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</LinearLayout>

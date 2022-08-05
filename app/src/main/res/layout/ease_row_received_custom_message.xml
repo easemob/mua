@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/ease_row_top_padding">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ease_row_top_margin">
+
+        <com.community.mua.imkit.widget.EaseImageView
+            android:id="@+id/iv_userhead"
+            style="@style/ease_row_receive_iv_userhead_style" />
+
+        <LinearLayout
+            android:id="@+id/bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_chat_activity"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/iv_userhead"
+            android:background="@drawable/ease_chat_bubble_receive_bg"
+            android:minWidth="30dp"
+            android:paddingStart="12dp"
+            android:gravity="center_vertical"
+            android:paddingTop="11dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="11dp">
+
+            <TextView
+                android:id="@+id/tv_chatcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:gravity="center|left"
+                android:lineSpacingExtra="2dp"
+                android:maxWidth="140dp"
+                android:minHeight="@dimen/ease_chat_text_min_height"
+                android:textColor="#ff000000"
+                android:textSize="15sp"
+                tools:text="宝，我完成了和你一起看电影，来看看吧" />
+
+            <ImageView
+                android:id="@+id/iv_type"
+                android:layout_width="62dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:src="@mipmap/cooking_in_chat" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="#84BAF8" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="-60dp"
+        android:end="-10dp"
+        android:gravity="bottom"
+        android:start="-10dp">
+        <shape
+            android:shape="oval"
+            android:useLevel="true">
+            <solid android:color="#FFFFFF" />
+            <!-- 修改height会改变圆弧的弧度 -->
+            <size android:height="160dp" />
+        </shape>
+    </item>
+
+</layer-list>

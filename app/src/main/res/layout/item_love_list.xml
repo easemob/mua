@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/sp_white_a594fe_10"
+    android:orientation="horizontal"
+    android:gravity="bottom"
+    android:paddingStart="8dp">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="72dp"
+        android:layout_height="57dp"
+        android:layout_marginVertical="8dp"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一起看电影"
+            android:textColor="#343434"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="一起看一场走心电影叭"
+            android:textColor="#294dca"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/chervon" />
+
+        <ImageView
+            android:id="@+id/iv_finished"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/iv_enter"
+            android:layout_marginTop="-15dp"
+            android:layout_marginEnd="1.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:src="@drawable/done_big" />
+    </RelativeLayout>
+
+
+</LinearLayout>

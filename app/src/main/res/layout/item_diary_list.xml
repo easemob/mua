@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFEBF6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/em_margin_20"
+        android:background="@drawable/dairy_list_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="@dimen/adaptive_6dp">
+            <TextView
+                android:id="@+id/tv_day_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06/13"
+                android:textColor="#ED964B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="周一"
+                android:textColor="#ED964B"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/adaptive_10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="#FFE3F3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/adaptive_12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <FrameLayout
+                android:id="@+id/fl_avatar_mine"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/sp_ff007a">
+
+                <com.community.mua.views.CircleImageView
+                    android:id="@+id/iv_avatar_mine"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/fl_avatar_mine"
+                android:layout_alignBottom="@id/fl_avatar_mine"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_diary_moon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/boring" />
+
+                <TextView
+                    android:id="@+id/tv_diary_moon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="孤单"
+                    android:textColor="#ED964B"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:fadingEdge="none"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:hint="发生了什么呢?"
+                    android:maxLength="500"
+                    android:textColor="#AC9E9E"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="14sp"
+                    tools:text="该漏洞是由于在中在处理服务间通信时存在默认鉴权白名单导致，代码在解析请求时，会判断值，若是以字符串开头，则会跳过后续权限校验流程。攻击者可通过利用该漏洞发送特殊数据绕过身份认证，从而调用任何接口，获取内部数据或添加任意用户，进一步利用甚至可能执行恶意代码该漏洞是由于在中在处理服务间通信时存在默认鉴权白名单导致，代码在解析请求时，会判断值，若是以字符串开头，则会跳过后续权限校验流程。攻击者可通过利用该漏洞发送特殊数据绕过身份认证，从而调用任何接口，获取内部数据或添加任意用户，进一步利用甚至可能执行恶意代码
+该漏洞是由于在中在处理服务间通信时存在默认鉴权白名单导致，代码在解析请求时，会判断值，若是以字符串开头，则会跳过后续权限校验流程。攻击者可通过利用该漏洞发送特殊数据绕过身份认证，从而调用任何接口，获取内部数据或添加任意用户，进一步利用甚至可能执行恶意代码
+该漏洞是由于在中在处理服务间通信时存在默认鉴权白名单导致，代码在解析请求时，会判断值，若是以字符串开头，则会跳过后续权限校验流程。攻击者可通过利用该漏洞发送特殊数据绕过身份认证，从而调用任何接口，获取内部数据或添加任意用户，进一步利用甚至可能执行恶意代码" />
+
+                <ImageView
+                    android:id="@+id/iv_diary_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/iv_diary_trash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/journal_trash" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.community.mua">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- IM SDK required start -->
+    <!-- 允许程序振动，用于本地通知设置振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 麦克风权限，用于语音消息时录制语音，不使用录制语音可以移除 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 相机权限，用于图片消息时拍摄图片，不使用拍照可以移除 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 获取运营商信息，用于获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 访问GPS定位，用于定位消息，如果不用定位相关可以移除 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- api 21后被标记为deprecated，可以移除 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 允许程序开机自动运行，SDK保活时使用，如果使用厂商推送，可以移除 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_BACKGROUND_LOCATION"
+        android:foregroundServiceType="location" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mua"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".ui.WatchMovieActivity"
+            android:theme="@style/MyTranslucentTheme"
+            android:exported="false" />
+        <activity
+            android:name=".ui.call.VideoCallActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DisclaimerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.AboutHxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.diary.DiaryListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MapSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginRecordSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MapLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CustomSplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.DistanceActivity" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="百度API_key" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.RegisterActivity" />
+        <activity
+            android:name=".ui.PairActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".ui.WelcomeActivity" />
+        <activity
+            android:name=".ui.ChatActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".ui.diary.MoodDiaryActivity" />
+        <activity android:name=".ui.diary.AddDiaryActivity" />
+        <activity android:name=".ui.BgmActivity" />
+        <activity android:name=".ui.ChatSettingActivity" />
+        <activity android:name=".ui.MyInfoActivity" />
+        <activity android:name=".ui.SettingActivity" />
+        <activity android:name=".ui.NotesActivity" />
+        <activity android:name=".ui.CreateNoteActivity" />
+        <activity android:name=".ui.UnPairActivity" />
+        <activity android:name=".ui.AllNotesActivity" />
+        <activity android:name=".ui.MsgSettingActivity" />
+        <activity android:name=".ui.ChangeChatBgActivity" />
+        <activity android:name=".imkit.ui.EaseShowBigImageActivity" />
+        <activity android:name=".ui.ChatHistoryActivity" />
+        <activity android:name=".ui.ChatPicHistoryActivity" />
+        <activity android:name=".ui.PetMarketActivity" />
+        <activity android:name=".ui.ModifyInfoActivity" />
+        <activity android:name=".ui.diary.WriteDiaryActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.community.mua.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".ui.CalendarActivity" />
+        <activity android:name=".ui.ModifyAnniversaryActivity" />
+        <activity android:name=".ui.ModifySplashActivity" />
+        <activity android:name=".ui.LoveListActivity" />
+
+        <provider
+            android:name=".utils.BuglyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="name,resource" />
+        </provider>
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" /> <!-- 设置环信应用的 AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="环信IM_APPKEY" /> 
+        <!-- 声明 SDK 所需的 service SDK 核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".services.MusicService" /> <!-- 声明 SDK 所需的 receiver -->
+        <receiver
+            android:name="com.hyphenate.chat.EMMonitorReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选 filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Mua" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--透明activity的style-->
+    <style name="transparent_activity" parent="Base.Theme.AppCompat">
+        <item name="android:background">@android:color/transparent</item>              //设置布局背景
+        <item name="android:windowBackground">@android:color/transparent</item>        //设置背景颜色
+        <item name="android:windowContentOverlay">@android:color/transparent</item>    //设置主题
+        <item name="android:backgroundDimAmount">0.7</item>                            //设置背景模糊的透明度
+        <item name="android:windowNoTitle">true</item>                                 //设置是否没有标题
+        <item name="android:windowIsFloating">true</item>                              //设置dialog是否悬浮在activity上
+        <item name="android:backgroundDimEnabled">true</item>                          //设置弹出的对话框背景是否是暗的
+        <item name="android:windowIsTranslucent">true</item>                           //设置是否半透明
+    </style>
+
+    <style name="MyTranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

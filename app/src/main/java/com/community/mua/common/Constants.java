@@ -2,7 +2,7 @@ package com.community.mua.common;
 
 public class Constants {
     public static final long NET_TIMEOUT_SECONDS = 30;
-    public static final String HTTP_HOST = "http://39.97.166.221:9001/";
+    public static final String HTTP_HOST = "ip:port";
     public static final String IM_PSW = "1qaz!QAZ";
 
 

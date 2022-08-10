@@ -16,10 +16,8 @@ Mua是一款基于环信IM+声网RTC打造的二次元恋爱互动开源项目,�
   App.java第70行，主要用户APP日志收集用户可以根据自己的实际情况替换或者移除。
 ### 4、声网AgoraAppId
 [注册声网APPID]：(https://sso2.agora.io/cn/v4/signup/with-sms)
-  AgoraAppId在ImHelper.java 第161行 集成用户可以替换为自己的AgoraAppId，
-
-
-
-
-
-
+  AgoraAppId在ImHelper.java 第161行 集成用户可以替换为自己的AgoraAppId
+  
+## 请求地址
+  在路径com.community.mua.common里面的Constants文件里面
+   HTTP_HOST配置网络请求的地址

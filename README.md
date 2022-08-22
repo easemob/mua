@@ -16,6 +16,9 @@ Mua是一款基于环信IM+声网RTC打造的二次元恋爱互动开源项目,�
 Android Studio 4.0.0 或以上版本。
 Android 5.0或以上版本的设备。部分模拟机可能无法支持本项目的全部功能，所以推荐使用真机。
 
+### 获取示例项目
+前往 GitHub 下载或克隆 [Easemob_mua](https://github.com/easemob/mua/) 示例项目.
+
 ### 获取APPKEY
 ### 1、环信SDK相关
 前往[环信官网](https://console.easemob.com/user/register)注册项目，生成APPKey、Client_ID和ClientSecret

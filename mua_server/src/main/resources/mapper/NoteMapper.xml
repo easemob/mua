@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.NoteMapper">
+
+    <sql id="BaseColumnList">
+        note_id as noteId,
+        matching_code as matchingCode,
+        user_id as userId,
+        note_time_stamp as noteTimeStamp,
+        topping_time_stamp as toppingTimeStamp,
+        content as content,
+        create_time as updateTime
+    </sql>
+
+    <insert id="createNote"   useGeneratedKeys="true" keyProperty="noteId"  >
+        insert into mua_note
+        (note_id,matching_code,user_id,diary_time_stamp,topping_time_stamp,content,create_time)
+        values
+        (
+        #{noteId},
+        #{matchingCode},
+        #{userId},
+        #{noteTimeStamp},
+        #{toppingTimeStamp},
+        #{content},
+        #{createTime}
+        )
+    </insert>
+
+
+    <select id="getNoteList" parameterType="String" resultType="com.easemob.mua.pojo.dto.rsp.NoteRspDto">
+        select
+        <include refid="BaseColumnList"/>
+         from mua_note
+         <where >
+            <if test="matchingCode !=null and matchingCode !=''">
+                and matching_code = #{matchingCode}
+            </if>
+        </where>
+    </select>
+
+
+
+    <delete id="deleteNote" parameterType="string">
+        delete from mua_note  where note_id = #{noteId}
+    </delete>
+
+    <update id="updateToppingTime">
+        update mua_note
+        <trim prefix="set" prefixOverrides=",">
+            <if test="toppingTimeStamp !=null and toppingTimeStamp !=''">
+                topping_time_stamp = #{toppingTimeStamp}
+            </if>
+        </trim>
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="noteId !=null and noteId !=''">
+                and note_id = #{noteId}
+            </if>
+        </trim>
+        limit 1
+    </update>
+
+
+
+
+    <select id="queryDiary" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.NoteRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_note
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="noteId !=null and noteId !=''">
+                and note_id = #{noteId}
+            </if>
+        </trim>
+    </select>
+
+</mapper>

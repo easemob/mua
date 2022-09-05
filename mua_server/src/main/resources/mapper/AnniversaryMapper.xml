@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.AnniversaryMapper">
+
+    <sql id="BaseColumnList">
+        id as id,
+        matching_code as matchingCode,
+        user_id as userId,
+        anniversary_name as anniversaryName,
+        anniversary_time as anniversaryTime,
+        is_repeat as isRepeat,
+        create_time as createTime
+    </sql>
+
+    <insert id="createAnniversary"   useGeneratedKeys="true" keyProperty="id"  >
+        insert into mua_anniversary
+        (id,matching_code,user_id,anniversary_name,anniversary_time,is_repeat,create_time)
+        values
+        (
+        #{id},
+        #{matchingCode},
+        #{userId},
+        #{name},
+        #{time},
+        #{repeat},
+        #{createTime}
+        )
+    </insert>
+
+
+    <select id="getAllByMatchingCode" parameterType="String" resultType="com.easemob.mua.pojo.dto.rsp.AnniversaryRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_anniversary
+        <where >
+            <if test="matchingCode !=null and matchingCode !=''">
+                and matching_code = #{matchingCode}
+            </if>
+        </where>
+    </select>
+
+
+
+    <delete id="deleteDiary" parameterType="string">
+        delete from mua_diary  where diary_id = #{diaryId}
+    </delete>
+
+    <select id="queryDiary" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.DiaryRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_diary
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="diaryId !=null and diaryId !=''">
+                and diary_id = #{diaryId}
+            </if>
+        </trim>
+    </select>
+
+</mapper>

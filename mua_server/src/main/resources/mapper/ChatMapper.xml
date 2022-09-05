@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.ChatMapper">
+
+    <sql id="BaseColumnList">
+        chat_id as chatId,
+        create_time as createTime
+    </sql>
+
+    <insert id="createChatAccount"   useGeneratedKeys="true" keyProperty="chatId"  >
+        insert into mua_chat
+        (chat_id,create_time)
+        values
+        (
+        #{chatId},
+        #{time}
+        )
+    </insert>
+
+    <select id="getChatInfoById" parameterType="String" resultType="com.easemob.mua.pojo.dto.rsp.ChatAccountRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_chat
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="chatId !=null and chatId !=''">
+                and chat_id = #{chatId}
+            </if>
+        </trim>
+    </select>
+
+    <select id="selectChatId" parameterType="String" resultType="int">
+        select count(0) from mua_chat where chat_id = #{chatId}
+    </select>
+
+
+    <delete id="unMatch" parameterType="string">
+        delete from mua_matching  where matching_id = #{matchingId}
+    </delete>
+
+    <select id="selectUserId" parameterType="String" resultType="int">
+        select count(0) from mua_user where user_id = #{userId}
+    </select>
+
+</mapper>

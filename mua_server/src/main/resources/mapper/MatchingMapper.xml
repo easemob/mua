@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.MatchingMapper">
+
+    <sql id="BaseColumnList">
+        matching_id as matchingId,
+        matching_code as matchingCode,
+        splash_url as splashUrl,
+        album_url as albumUrl,
+        matching_time as matchingTime,
+        kitty_status_time as kittyStatusTime,
+        matching_date as matchingDate
+    </sql>
+
+    <insert id="userMatching"  parameterType="com.easemob.mua.pojo.po.MatchingPo" useGeneratedKeys="true" keyProperty="matchingId" >
+        insert into mua_matching
+        (matching_id, matching_code, splash_url,album_url,matching_time,kitty_status_time,matching_date)
+        values
+        (
+        #{matchingId},
+        #{matchingCode},
+        #{splashUrl},
+        #{albumUrl},
+        #{matchingTime},
+        #{kittyStatusTime},
+        #{matchingDate}
+        )
+    </insert>
+
+    <select id="getMatchingInfoById" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.MatchingRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_matching
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="matchingId !=null and matchingId !=''">
+                and matching_id = #{matchingId}
+            </if>
+        </trim>
+    </select>
+
+    <select id="selectMatchingId" parameterType="String" resultType="int">
+        select count(0) from mua_matching where matching_id = #{matchingId}
+    </select>
+
+
+    <delete id="unMatch" parameterType="string">
+        delete from mua_matching  where matching_id = #{matchingId}
+    </delete>
+
+
+    <select id="getMatchingInfoByCode" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.MatchingRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_matching
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="matchingCode !=null and matchingCode !=''">
+                and  matching_code = #{matchingCode}
+            </if>
+        </trim>
+    </select>
+
+
+    <select id="selectMatchingCode" parameterType="String" resultType="int">
+        select count(0) from mua_matching where matching_code = #{matchingCode}
+    </select>
+
+
+    <update id="setSplashUrlByCode" >
+        update mua_matching
+            <set>
+                splash_url = #{splashUrl}
+            </set>
+
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="matchingCode !=null and matchingCode !=''">
+                and  matching_code = #{matchingCode}
+            </if>
+        </trim>
+    </update>
+
+
+    <update id="setAlbumUrlByCode" >
+        update mua_matching
+        <set>
+            album_url = #{albumUrl}
+        </set>
+
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="matchingCode !=null and matchingCode !=''">
+                and  matching_code = #{matchingCode}
+            </if>
+        </trim>
+    </update>
+
+    <update id="setKittyStatusTime" >
+        update mua_matching
+        <set>
+            kitty_status_time = #{kittyStatusTime}
+        </set>
+
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="matchingCode !=null and matchingCode !=''">
+                and  matching_code = #{matchingCode}
+            </if>
+        </trim>
+    </update>
+
+</mapper>

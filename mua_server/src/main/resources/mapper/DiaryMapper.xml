@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.DiaryMapper">
+
+    <sql id="BaseColumnList">
+        diary_id as diaryId,
+        matching_code as matchingCode,
+        user_id as userId,
+        diary_month as diaryMonth,
+        diary_time_stamp as diaryTimeStamp,
+        mood as mood,
+        mood_reason as moodReason,
+        content as content,
+        pic as pic,
+        is_private as isPrivate,
+        create_time as updateTime
+    </sql>
+
+    <insert id="writeDiary"   useGeneratedKeys="true" keyProperty="diaryId"  >
+        insert into mua_diary
+        (diary_id,matching_code,user_id,diary_month,diary_time_stamp,mood,mood_reason,content,pic,is_private,create_time)
+        values
+        (
+        #{diaryId},
+        #{matchingCode},
+        #{userId},
+        #{diaryMonth},
+        #{diaryTimeStamp},
+        #{mood},
+        #{moodReason},
+        #{content},
+        #{pic},
+        #{isPrivate},
+        #{createTime}
+        )
+    </insert>
+
+
+    <select id="getDiaryList" parameterType="String" resultType="com.easemob.mua.pojo.dto.rsp.DiaryRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_diary
+        <where >
+            <if test="matchingCode !=null and matchingCode !=''">
+                and matching_code = #{matchingCode}
+            </if>
+            <if test="diaryMonth !=null and diaryMonth !=''">
+                and diary_month = #{diaryMonth}
+            </if>
+        </where>
+    </select>
+
+
+
+    <delete id="deleteDiary" parameterType="string">
+        delete from mua_diary  where diary_id = #{diaryId}
+    </delete>
+
+    <delete id="deleteDiaryByMatchingCode" parameterType="string">
+        delete from mua_diary  where matching_code = #{matchingCode}
+    </delete>
+
+
+
+    <select id="queryDiary" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.DiaryRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_diary
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="diaryId !=null and diaryId !=''">
+                and diary_id = #{diaryId}
+            </if>
+        </trim>
+    </select>
+
+
+
+
+</mapper>

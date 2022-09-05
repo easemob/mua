@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.LoveMapper">
+
+    <sql id="BaseColumnList">
+        id as id,
+        user_id as userId,
+        img_url as imgUrl,
+        position as position,
+        create_time as createTime
+    </sql>
+
+
+
+    <update id="updateLove" >
+        update mua_love set img_url = #{imgUrl} where user_id = #{userId} and position = #{position};
+    </update>
+
+    <delete id="deleteLove" >
+        delete from mua_love where user_id = #{userId} and position = #{position};
+    </delete>
+
+    <select id="selectLove" resultType="int">
+        select count(0) from mua_love where user_id = #{userId} and position = #{position};
+    </select>
+
+    <select id="selectLoveByUserId" resultType="com.easemob.mua.pojo.dto.rsp.LoveRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_love
+        <where >
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+                and position = #{position};
+        </where>
+    </select>
+
+
+    <select id="selectLoveByOnlyUserId"  resultType="com.easemob.mua.pojo.dto.rsp.LoveRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_love
+        <where >
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </where>
+    </select>
+
+
+
+
+    <select id="queryDiary" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.DiaryRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_love
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="diaryId !=null and diaryId !=''">
+                and diary_id = #{diaryId}
+            </if>
+        </trim>
+    </select>
+
+</mapper>

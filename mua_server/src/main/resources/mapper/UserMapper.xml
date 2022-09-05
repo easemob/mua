@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.UserMapper">
+
+    <sql id="BaseColumnList">
+        user_id as userid,
+        chat_id as chatId,
+        nickname ,
+        avatar ,
+        gender,
+        birth ,
+        mine_code as mineCode ,
+        matching_code as matchingCode ,
+        is_matching as isMatching ,
+        is_record_private as isRecordPrivate,
+        is_see_location as isSeeLocation,
+        create_time as createTime
+    </sql>
+
+    <insert id="saveUser"  parameterType="com.easemob.mua.pojo.po.UserPo" useGeneratedKeys="true" keyProperty="userid" >
+        insert into mua_user
+        (user_id, chat_id, nickname, avatar,gender,birth,is_matching,mine_code,matching_code,is_record_private,is_see_location,create_time)
+        values
+        (
+        #{userid},
+        #{chatId},
+        #{nickname},
+        #{avatar},
+        #{gender},
+        #{birth},
+        #{isMatching},
+        #{mineCode},
+        #{matchingCode},
+        #{isRecordPrivate},
+        #{isSeeLocation},
+        #{createTime}
+        )
+    </insert>
+
+    <update id="updateUserInfo">
+        update mua_user
+            set  nickname = #{nickName},birth = #{birth},gender= #{gender}
+
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="chatId !=null and chatId !=''">
+                and chat_id = #{chatId}
+            </if>
+        </trim>
+        limit 1
+    </update>
+
+
+    <select id="getUserById" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.UserRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_user
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </trim>
+    </select>
+
+    <select id="selectUserId" parameterType="String" resultType="int">
+        select count(0) from mua_user where user_id = #{userId}
+    </select>
+
+    <select id="getUserByCode" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.UserRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_user
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="mineCode !=null and mineCode !=''">
+                and mine_code = #{mineCode}
+            </if>
+        </trim>
+    </select>
+
+    <select id="selectUserCode" parameterType="String" resultType="int">
+        select count(0) from mua_user where mine_code = #{mineCode}
+    </select>
+
+    <select id="getUserByChatId" parameterType="string" resultType="com.easemob.mua.pojo.dto.rsp.UserRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_user
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="chatId !=null and chatId !=''">
+                and chat_id = #{chatId}
+            </if>
+        </trim>
+    </select>
+
+    <select id="selectChatId" parameterType="String" resultType="int">
+        select count(0) from mua_user where chat_id = #{chatId}
+    </select>
+
+    <select id="selectMatchingCode" parameterType="String" resultType="com.easemob.mua.pojo.dto.rsp.UserRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_user
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="matchingCode !=null and matchingCode !=''">
+                and matching_code = #{matchingCode}
+            </if>
+        </trim>
+    </select>
+
+
+    <update id="updateUserBirth">
+        update mua_user
+        <trim prefix="set" prefixOverrides=",">
+            <if test="birth !=null and birth !=''">
+                birth = #{birth}
+            </if>
+
+        </trim>
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </trim>
+        limit 1
+    </update>
+
+    <update id="updateUserNickName">
+        update mua_user
+        <trim prefix="set" prefixOverrides=",">
+            <if test="nickName !=null and nickName !=''">
+                nickname = #{nickName}
+            </if>
+        </trim>
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </trim>
+        limit 1
+    </update>
+
+    <update id="updateUserAvatar">
+        update mua_user
+        <trim prefix="set" prefixOverrides=",">
+            <if test="avatar !=null and avatar !=''">
+                avatar = #{avatar}
+            </if>
+        </trim>
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </trim>
+        limit 1
+    </update>
+
+    <update id="updateMatchingStatus">
+        update mua_user
+            <set>
+                is_matching = #{isMatching},matching_code = #{matchingCode}
+            </set>
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </trim>
+        limit 1
+    </update>
+
+
+    <update id="setIsPrivate" >
+        update mua_user
+        <set>
+            is_record_private = #{isRecordPrivate}
+        </set>
+
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </trim>
+    </update>
+
+
+    <update id="setSeeLocation" >
+        update mua_user
+        <set>
+            is_see_location = #{isSeeLocation}
+        </set>
+
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </trim>
+    </update>
+</mapper>

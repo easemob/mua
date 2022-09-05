@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.easemob.mua.mapper.LoginRecordMapper">
+
+    <sql id="BaseColumnList">
+        record_id as recordId,
+        user_id as userId,
+        time_stamp as timeStampLogin,
+        login_address as loginAddress,
+        latitude as latitude,
+        longitude as longitude,
+        mobile_info as mobileInfo,
+        create_time as createTime
+    </sql>
+
+    <insert id="writeDiary"   useGeneratedKeys="true" keyProperty="recordId"  >
+        insert into mua_login_record
+        (record_id,user_id,time_stamp,login_address,latitude,longitude,mobile_info,is_private,is_see_location,create_time)
+        values
+        (
+        #{recordId},
+        #{userId},
+        #{timeStampLogin},
+        #{loginAddress},
+        #{latitude},
+        #{longitude},
+        #{mobileInfo},
+        #{isPrivate},
+        #{isSeeLocation},
+        #{createTime}
+        )
+    </insert>
+
+
+    <select id="getList" parameterType="String" resultType="com.easemob.mua.pojo.dto.rsp.LoginRecordRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_login_record
+        <where >
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </where>
+        order by time_stamp desc
+    </select>
+
+    <select id="getLastList" parameterType="String" resultType="com.easemob.mua.pojo.dto.rsp.LoginRecordRspDto">
+        select
+        <include refid="BaseColumnList"/>
+        from mua_login_record
+        <where >
+            <if test="userId !=null and userId !=''">
+                and user_id = #{userId}
+            </if>
+        </where>
+        order by time_stamp desc limit 1
+    </select>
+
+
+</mapper>

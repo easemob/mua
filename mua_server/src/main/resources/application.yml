@@ -1,0 +1,9 @@
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://ip:port/数据库名?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=true
+    username: 账号
+    password: 密码
